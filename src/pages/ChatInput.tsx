@@ -24,9 +24,10 @@ type Props = {
   onSend: (e: React.FormEvent, turnstileToken?: string) => void;
   input: string;
   setInput: (v: string) => void;
+  placeholder?: string;
 };
 
-export function ChatInput({ onSend, input, setInput }: Props) {
+export function ChatInput({ onSend, input, setInput, placeholder }: Props) {
   const formRef = useRef<HTMLFormElement>(null);
   const turnstileRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
@@ -76,10 +77,10 @@ export function ChatInput({ onSend, input, setInput }: Props) {
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="px-4 pb-2 space-y-2">
       {TURNSTILE_SITE_KEY ? <div ref={turnstileRef} className="flex justify-center" /> : null}
-      <div className="flex gap-2 items-end rounded-xl border border-border bg-card/70 backdrop-blur-sm p-1.5 pl-3.5 transition-colors focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/25">
+      <div className="flex gap-2 items-end rounded-md border border-[hsl(var(--chat-border))] bg-[hsl(var(--chat-user))]/80 backdrop-blur-sm p-1.5 ps-3.5 shadow-[0_12px_44px_-26px_#000] transition-colors focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/25">
         <Textarea
           aria-label="Type your question"
-          placeholder="Ask anything - FR/EN auto-detected"
+          placeholder={placeholder || "Ask anything — language auto-detected"}
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {

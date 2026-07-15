@@ -34,7 +34,7 @@ Last consolidated: 2026-07-15.
 - Recent ENSAI graduate, actively looking for a Data / Cloud Engineer role, immediately available. [v]
 
 ### Contacts (authorized to share)
-- Email: elyanboiyayoub@gmail.com [v]
+- Email: yanboiyayoub@gmail.com [v]
 - Phone: +33 7 74 39 32 09 [v]
 - LinkedIn: linkedin.com/in/ayoub-el-yanboiy [v]
 - GitHub: none public (do not point visitors to a GitHub). [v]
@@ -141,7 +141,7 @@ and R role (R, R Markdown), NOT a cloud role: it does not carry the GCP / Kafka 
 |---|---|---|
 | Name / role | Ayoub EL YANBOIY, Data Engineer (Cloud, Big Data, DevOps) | Sec 1 Identity |
 | Status | recent ENSAI grad (Dec 2025), actively looking, immediately available | Sec 1 Current status |
-| Email | elyanboiyayoub@gmail.com | Sec 1 (confirmed by operator) |
+| Email | yanboiyayoub@gmail.com | Sec 1 (confirmed by operator) |
 | Phone | +33 7 74 39 32 09 | Sec 1 (confirmed publish) |
 | LinkedIn | linkedin.com/in/ayoub-el-yanboiy | Sec 1 |
 | Languages | Arabic native, French bilingual, English B2+ (TOEIC 885/990) | Sec 3 |

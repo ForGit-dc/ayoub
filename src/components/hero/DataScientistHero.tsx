@@ -7,7 +7,7 @@ import { startMotif } from "./motif";
 import "./landing.css";
 
 const LINKEDIN = "https://www.linkedin.com/in/ayoub-el-yanboiy";
-const EMAIL = "elyanboiyayoub@gmail.com";
+const EMAIL = "yanboiyayoub@gmail.com";
 
 // Flagship case-study numbers (Opinion Science, Twitter corpus Sept 2025).
 // Aligned one-to-one with LANDING_COPY.<lang>.stats.
@@ -81,7 +81,7 @@ export default function DataScientistHero() {
     return startMotif(canvas, {
       accent: "#A87B54",                       // --lp-accent (aged copper)
       accent2: "#D8B48C",                      // --lp-accent-2 (champagne)
-      dim: "rgba(169, 150, 128, 0.45)",        // --lp-muted at low alpha
+      dim: "rgba(169, 150, 128, 0.62)",        // --lp-muted, readable over espresso
     });
   }, []);
 

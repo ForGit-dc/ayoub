@@ -118,9 +118,9 @@ export function IdentityModal({ open, onOpenChange, sessionId, language, onIdent
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md rounded-md border-t-2 border-t-primary/60">
         <DialogHeader>
-          <DialogTitle>{t.title}</DialogTitle>
+          <DialogTitle className="font-display text-xl tracking-tight">{t.title}</DialogTitle>
         </DialogHeader>
         
         <div className="space-y-4">

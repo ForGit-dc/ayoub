@@ -69,12 +69,12 @@ export const LeftPanel = memo(function LeftPanel({
   const profileContent = (
     <div className="flex flex-col space-y-4">
       <div className="flex flex-col items-center text-center">
-        <Avatar className="h-24 w-24 ring-2 ring-accent/30 shadow-sm">
+        <Avatar className="h-24 w-24 ring-2 ring-primary/50 shadow-[0_0_24px_-8px_hsl(var(--primary))]">
           <AvatarFallback>AY</AvatarFallback>
           <AvatarImage src={getPortraitUrl()} alt={getPortraitAlt()} className="object-cover" />
         </Avatar>
-        <h2 className="mt-3 text-xl font-semibold tracking-tight">{displayName}</h2>
-        <p className="text-sm text-primary mt-1 tracking-tight">Data Engineer (ENSAI)</p>
+        <h2 className="mt-3 text-2xl font-display font-semibold tracking-tight">{displayName}</h2>
+        <p className="meta-label mt-1.5 !text-primary">Data Engineer · ENSAI</p>
       </div>
       <Separator />
       <nav aria-label="Profile links" className="space-y-2">
@@ -84,7 +84,7 @@ export const LeftPanel = memo(function LeftPanel({
           </a>
         </Button>
         <Button asChild variant="outline" className="w-full justify-start">
-          <a href="mailto:elyanboiyayoub@gmail.com">
+          <a href="mailto:yanboiyayoub@gmail.com">
             <Mail className="mr-2" /> {tr(lang, 'email')} <ExternalLink className="ml-auto" />
           </a>
         </Button>
@@ -92,7 +92,7 @@ export const LeftPanel = memo(function LeftPanel({
       <Separator />
       {/* Identity Settings */}
       <div className="space-y-2">
-        <h3 className="text-sm font-medium">{tr(lang, 'settings')}</h3>
+        <h3 className="meta-label">{tr(lang, 'settings')}</h3>
         {visitorIdentity?.name ? (
           <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg border">
             <div className="flex items-center gap-2">
@@ -156,16 +156,15 @@ export const LeftPanel = memo(function LeftPanel({
       <Separator />
       <div className="flex flex-wrap gap-2" aria-label="Suggested Q&A">
         {suggestedQA.map(q => (
-          <Button 
-            key={q.id} 
-            type="button" 
-            variant="secondary" 
-            size="sm" 
+          <button
+            key={q.id}
+            type="button"
             onClick={() => onSuggestedQA(q.id)}
             aria-label={q.label_en}
+            className="font-mono text-xs text-[hsl(var(--accent-2))] border border-border rounded-sm px-3 py-1.5 bg-transparent hover:border-[hsl(var(--accent-2))] hover:bg-[hsl(var(--accent-2))]/10 hover:text-foreground transition-colors text-start"
           >
             {lang === 'fr' ? q.label_fr : q.label_en}
-          </Button>
+          </button>
         ))}
       </div>
     </div>
@@ -176,7 +175,7 @@ export const LeftPanel = memo(function LeftPanel({
       dir={lang === "ar" ? "rtl" : "ltr"}
       className="h-full min-h-0 overflow-y-auto overscroll-contain"
     >
-      <Card className="p-5 bg-card/50 border-border">
+      <Card className="p-5 rounded-md bg-gradient-to-br from-card to-background border-border border-t-primary/40">
         {profileContent}
       </Card>
     </aside>

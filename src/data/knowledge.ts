@@ -76,7 +76,7 @@ export const suggestedQA = [
     label_fr: "Coordonnées",
     user_en: "How can I contact you?",
     user_fr: "Comment te contacter ?",
-    answer_en: "You can reach me by email at elyanboiyayoub@gmail.com or by phone at +33 7 74 39 32 09. I’m also on LinkedIn (/in/ayoub-el-yanboiy).",
-    answer_fr: "Tu peux me joindre par email à elyanboiyayoub@gmail.com ou par téléphone au +33 7 74 39 32 09. Je suis aussi sur LinkedIn (/in/ayoub-el-yanboiy)."
+    answer_en: "You can reach me by email at yanboiyayoub@gmail.com or by phone at +33 7 74 39 32 09. I’m also on LinkedIn (/in/ayoub-el-yanboiy).",
+    answer_fr: "Tu peux me joindre par email à yanboiyayoub@gmail.com ou par téléphone au +33 7 74 39 32 09. Je suis aussi sur LinkedIn (/in/ayoub-el-yanboiy)."
   }
 ];

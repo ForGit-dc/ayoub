@@ -30,7 +30,7 @@ export function startMotif(canvas: HTMLCanvasElement, colors: MotifColors): () =
 
   const build = () => {
     pipes = [];
-    const n = Math.max(5, Math.round(h / 150));
+    const n = Math.max(6, Math.round(h / 115));
     for (let i = 0; i < n; i++) {
       const y = h * (0.1 + (0.8 * i) / Math.max(1, n - 1));
       const bend = (Math.random() - 0.5) * h * 0.5;
@@ -88,7 +88,7 @@ export function startMotif(canvas: HTMLCanvasElement, colors: MotifColors): () =
       ctx.moveTo(p0[0], p0[1]);
       ctx.bezierCurveTo(rp1[0], rp1[1], rp2[0], rp2[1], p3[0], p3[1]);
       ctx.strokeStyle = pipe.boost > 0.2 ? colors.accent2 : colors.dim;
-      ctx.globalAlpha = 0.28 + pipe.boost * 0.4;
+      ctx.globalAlpha = 0.4 + pipe.boost * 0.4;
       ctx.lineWidth = 1 + pipe.boost * 0.8;
       ctx.stroke();
       ctx.globalAlpha = 1;

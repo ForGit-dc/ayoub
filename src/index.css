@@ -27,23 +27,25 @@ All colors MUST be HSL.
     --secondary-foreground: 36 33% 88%;
 
     --muted: 31 36% 11%;
-    --muted-foreground: 32 19% 58%;
+    --muted-foreground: 32 22% 66%;
 
     --accent: 28 33% 49%;
     --accent-foreground: 30 35% 7%;
+    /* Champagne highlight (--lp-accent-2 #D8B48C from the landing identity) */
+    --accent-2: 33 49% 70%;
 
     /* Chat / hero background + bubble tokens */
     --bg-slate-start: 30 35% 7%;    /* #17110B espresso */
     --bg-slate-end: 30 38% 5%;      /* slightly darker */
-    --chat-user: 30 35% 13%;        /* user bubble */
-    --chat-assistant: 30 36% 11%;   /* assistant surface */
-    --chat-border: 30 32% 17%;
+    --chat-user: 29 30% 17%;        /* user bubble, warmer + one step lighter */
+    --chat-assistant: 30 30% 12%;   /* assistant surface */
+    --chat-border: 30 26% 24%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 41 33% 95%;
 
-    --border: 30 32% 17%;
-    --input: 30 32% 17%;
+    --border: 30 28% 20%;
+    --input: 30 28% 20%;
     --ring: 28 33% 49%;
 
     --radius: 0.5rem;
@@ -75,22 +77,23 @@ All colors MUST be HSL.
     --secondary-foreground: 36 33% 88%;
 
     --muted: 31 36% 11%;
-    --muted-foreground: 32 19% 58%;
+    --muted-foreground: 32 22% 66%;
 
     --accent: 28 33% 49%;
     --accent-foreground: 30 35% 7%;
+    --accent-2: 33 49% 70%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 41 33% 95%;
 
-    --border: 30 32% 17%;
-    --input: 30 32% 17%;
+    --border: 30 28% 20%;
+    --input: 30 28% 20%;
     --ring: 28 33% 49%;
     --bg-slate-start: 30 35% 7%;
     --bg-slate-end: 30 38% 5%;
-    --chat-user: 30 35% 13%;
-    --chat-assistant: 30 36% 11%;
-    --chat-border: 30 32% 17%;
+    --chat-user: 29 30% 17%;
+    --chat-assistant: 30 30% 12%;
+    --chat-border: 30 26% 24%;
     --sidebar-background: 32 40% 10%;
     --sidebar-foreground: 36 33% 88%;
     --sidebar-primary: 28 33% 49%;
@@ -119,6 +122,19 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Editorial identity shared with the landing (.lp): display serif + mono meta */
+  .font-display {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  }
+  .meta-label {
+    font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+  }
+  html[dir="rtl"] .meta-label { letter-spacing: 0; }
+
   .bg-grid {
     background-image: radial-gradient(hsl(var(--accent)) / 0.07 1px, transparent 1px);
     background-size: 24px 24px;

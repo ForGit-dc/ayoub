@@ -386,10 +386,10 @@ export default function Chat() {
     if (!trimmed) return;
     if (limitReached) {
       const limitText = lang === 'fr'
-        ? `Merci pour ton intérêt ! Cette démo est limitée à ${MAX_QUESTIONS} questions par session. Pour continuer la conversation, écris-moi sur LinkedIn (linkedin.com/in/ayoub-el-yanboiy) ou par email à elyanboiyayoub@gmail.com.`
+        ? `Merci pour ton intérêt ! Cette démo est limitée à ${MAX_QUESTIONS} questions par session. Pour continuer la conversation, écris-moi sur LinkedIn (linkedin.com/in/ayoub-el-yanboiy) ou par email à yanboiyayoub@gmail.com.`
         : lang === 'ar'
-        ? `شكرًا على اهتمامك! هذه النسخة التجريبية محدودة بـ ${MAX_QUESTIONS} أسئلة لكل جلسة. لمواصلة الحديث، تواصل معي على LinkedIn (linkedin.com/in/ayoub-el-yanboiy) أو عبر البريد elyanboiyayoub@gmail.com.`
-        : `Thanks for your interest! This demo is limited to ${MAX_QUESTIONS} questions per session. To keep the conversation going, reach me on LinkedIn (linkedin.com/in/ayoub-el-yanboiy) or by email at elyanboiyayoub@gmail.com.`;
+        ? `شكرًا على اهتمامك! هذه النسخة التجريبية محدودة بـ ${MAX_QUESTIONS} أسئلة لكل جلسة. لمواصلة الحديث، تواصل معي على LinkedIn (linkedin.com/in/ayoub-el-yanboiy) أو عبر البريد yanboiyayoub@gmail.com.`
+        : `Thanks for your interest! This demo is limited to ${MAX_QUESTIONS} questions per session. To keep the conversation going, reach me on LinkedIn (linkedin.com/in/ayoub-el-yanboiy) or by email at yanboiyayoub@gmail.com.`;
       const notice: Message = {
         id: crypto.randomUUID(),
         role: "assistant",
@@ -494,10 +494,10 @@ export default function Chat() {
       }
       const isSessionLimit = serverError?.error === "session_limit_exceeded";
       const limitMsg = detectedLang === 'fr'
-        ? `Merci pour ton intérêt ! Cette démo est limitée à ${MAX_QUESTIONS} questions par session. Pour continuer, écris-moi sur LinkedIn (linkedin.com/in/ayoub-el-yanboiy) ou par email à elyanboiyayoub@gmail.com.`
+        ? `Merci pour ton intérêt ! Cette démo est limitée à ${MAX_QUESTIONS} questions par session. Pour continuer, écris-moi sur LinkedIn (linkedin.com/in/ayoub-el-yanboiy) ou par email à yanboiyayoub@gmail.com.`
         : detectedLang === 'ar'
-        ? `شكرًا على اهتمامك! هذه النسخة التجريبية محدودة بـ ${MAX_QUESTIONS} أسئلة لكل جلسة. للمتابعة، تواصل معي على LinkedIn (linkedin.com/in/ayoub-el-yanboiy) أو عبر البريد elyanboiyayoub@gmail.com.`
-        : `Thanks for your interest! This demo is limited to ${MAX_QUESTIONS} questions per session. To keep going, reach me on LinkedIn (linkedin.com/in/ayoub-el-yanboiy) or by email at elyanboiyayoub@gmail.com.`;
+        ? `شكرًا على اهتمامك! هذه النسخة التجريبية محدودة بـ ${MAX_QUESTIONS} أسئلة لكل جلسة. للمتابعة، تواصل معي على LinkedIn (linkedin.com/in/ayoub-el-yanboiy) أو عبر البريد yanboiyayoub@gmail.com.`
+        : `Thanks for your interest! This demo is limited to ${MAX_QUESTIONS} questions per session. To keep going, reach me on LinkedIn (linkedin.com/in/ayoub-el-yanboiy) or by email at yanboiyayoub@gmail.com.`;
       const outageMsg = detectedLang === 'fr'
         ? "Désolé, l'assistant est momentanément indisponible. Réessaie dans un instant."
         : detectedLang === 'ar'
@@ -697,11 +697,12 @@ export default function Chat() {
         {/* Mobile App Bar */}
         {isMobile && (
           <header className="flex items-center justify-between h-14 px-4 bg-background/80 backdrop-blur-sm border-b border-border sticky top-0 z-40">
-            <div className="flex items-center gap-3">
-              <a href={import.meta.env.BASE_URL} aria-label="Back to intro" className="inline-flex items-center justify-center h-8 w-8 rounded-full hover:bg-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/40">
+            <div className="flex items-center gap-2.5">
+              <a href={import.meta.env.BASE_URL} aria-label="Back to intro" className="inline-flex items-center justify-center h-8 w-8 rounded-sm ring-1 ring-border hover:ring-primary/60 hover:bg-primary/10 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50">
                 <ChevronLeft className="h-5 w-5" />
               </a>
-              <span className="font-semibold text-lg">Ayoub AI</span>
+              <span className="h-2 w-2 rotate-45 rounded-[1px] bg-primary shadow-[0_0_10px_hsl(var(--primary))]" aria-hidden="true" />
+              <span className="font-mono text-sm font-medium tracking-[0.12em] uppercase">Ayoub&nbsp;AI</span>
             </div>
             <div className="flex items-center gap-3">
               {/* Language pill */}
@@ -750,17 +751,14 @@ export default function Chat() {
 
         {/* Desktop Header */}
         {!isMobile && (
-          <header className="h-10 flex items-center justify-between">
-            <div className="flex items-center gap-2 rounded-full bg-background/70 backdrop-blur-sm ring-1 ring-border/60 shadow-sm px-2.5 py-1.5">
-              <a href={import.meta.env.BASE_URL} aria-label="Back to intro" className="inline-flex items-center justify-center h-6 w-6 rounded-full ring-1 ring-border/50 hover:bg-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/40">
+          <header className="h-12 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <a href={import.meta.env.BASE_URL} aria-label="Back to intro" className="inline-flex items-center justify-center h-7 w-7 rounded-sm ring-1 ring-border hover:ring-primary/60 hover:bg-primary/10 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50">
                 <ChevronLeft className="h-4 w-4" />
               </a>
-              <Avatar className="h-6 w-6">
-                <AvatarFallback>AY</AvatarFallback>
-                <AvatarImage src={getPortraitUrl()} alt={getPortraitAlt()} />
-              </Avatar>
-              <span className="text-sm font-medium">Ayoub AI</span>
-              <span className="ml-1 inline-flex h-2 w-2 rounded-full bg-green-500" aria-label="online" />
+              <span className="h-2 w-2 rotate-45 rounded-[1px] bg-primary shadow-[0_0_10px_hsl(var(--primary))]" aria-hidden="true" />
+              <span className="font-mono text-[13px] font-medium tracking-[0.14em] uppercase">Ayoub&nbsp;AI</span>
+              <span className="inline-flex h-2 w-2 rounded-full bg-green-500" aria-label="online" />
             </div>
             <div />
           </header>
@@ -785,7 +783,7 @@ export default function Chat() {
               <div id="chatMessages" ref={el => {
                 scrollRef.current = el;
                 msgsRef.current = el;
-              }} role="log" aria-live="polite" aria-atomic="false" aria-relevant="additions text" className="flex-1 min-h-0 overflow-y-auto overscroll-contain scroll-smooth pb-24 scrollbar-chat px-5 space-y-3 rounded-xl bg-background/40 backdrop-blur-sm ring-1 ring-border/50 animate-fade-in select-text" onScroll={e => {
+              }} role="log" aria-live="polite" aria-atomic="false" aria-relevant="additions text" className="flex-1 min-h-0 overflow-y-auto overscroll-contain scroll-smooth pb-24 scrollbar-chat px-5 space-y-3 rounded-md bg-background/40 backdrop-blur-sm ring-1 ring-border animate-fade-in select-text" onScroll={e => {
               const el = e.currentTarget;
               const dist = el.scrollHeight - el.scrollTop - el.clientHeight;
               setScrollTop(el.scrollTop);
@@ -825,7 +823,7 @@ export default function Chat() {
                   duration: 0.14,
                   ease: "easeOut"
                 }
-              }} className={m.role === "assistant" ? "max-w-[72ch] rounded-2xl border border-[hsl(var(--chat-border))]/60 bg-[hsl(var(--chat-assistant))]/60 px-4 py-3 shadow-sm mt-5 select-text" : "ml-auto max-w-[72ch] rounded-2xl border border-[hsl(var(--chat-border))]/60 bg-[hsl(var(--chat-user))] px-4 py-3 shadow-sm group mt-5 select-text"} tabIndex={0} onKeyDown={e => {
+              }} className={m.role === "assistant" ? "max-w-[72ch] rounded-md border border-[hsl(var(--chat-border))] border-s-2 border-s-primary/60 bg-[hsl(var(--chat-assistant))] px-4 py-3 shadow-sm mt-5 select-text" : "ms-auto max-w-[72ch] rounded-md border border-primary/25 bg-[hsl(var(--chat-user))] px-4 py-3 shadow-sm group mt-5 select-text"} tabIndex={0} onKeyDown={e => {
                 if (e.key === 'ArrowDown') {
                   const next = e.currentTarget.nextElementSibling as HTMLElement | null;
                   next?.focus();
@@ -848,10 +846,10 @@ export default function Chat() {
                       <Skeleton className="h-3 w-6/12 rounded-2xl" />
                       <div className="mt-2 typing-dots"><span></span><span></span><span></span></div>
                     </div> : <div>
-                      <p className="text-sm leading-relaxed tracking-tight whitespace-pre-wrap break-words select-text" dangerouslySetInnerHTML={renderMessageHtml(m.content)} />
+                      <p className="text-[15px] leading-relaxed whitespace-pre-wrap break-words select-text" dangerouslySetInnerHTML={renderMessageHtml(m.content)} />
                       {m.canExpand && <div className="mt-2 flex justify-end">
                           <Button type="button" variant="secondary" size="sm" className="h-6 px-2" aria-label="Expand with AI" onClick={() => sendText(m.canExpand!.userText)}>
-                            Expand with AI
+                            {t('expandWithAi')}
                           </Button>
                         </div>}
                       {m.streaming && <div className="mt-1 typing-dots"><span></span><span></span><span></span></div>}
@@ -876,17 +874,25 @@ export default function Chat() {
                       </div>
                     </div>}
                 </motion.article>)}
+              {messages.length <= 1 && <div className="mt-8 animate-fade-in">
+                  <p className="meta-label mb-3">{t('suggestionsLabel')}</p>
+                  <div className="flex flex-wrap gap-2.5">
+                    {suggestedQA.map(q => <button key={q.id} type="button" onClick={() => handleSuggestedQAClick(q.id)} className="font-mono text-xs text-[hsl(var(--accent-2))] border border-border rounded-sm px-3.5 py-2 bg-transparent hover:border-[hsl(var(--accent-2))] hover:bg-[hsl(var(--accent-2))]/10 hover:text-foreground transition-colors">
+                        {lang === 'fr' ? q.label_fr : q.label_en}
+                      </button>)}
+                  </div>
+                </div>}
               <div ref={endRef} />
               <div className="pointer-events-none absolute right-3 bottom-28 flex flex-col gap-2 items-end">
                 {unreadCount > 0 && !atBottom && <div className="pointer-events-auto rounded-full bg-background/80 ring-1 ring-border/60 px-3 py-1 text-xs shadow-sm">
-                    New messages ({unreadCount}) <button onClick={() => {
+                    {t('newMessages')(unreadCount)} <button onClick={() => {
                     if (!msgsRef.current) return;
                     msgsRef.current.scrollTo({
                       top: msgsRef.current.scrollHeight,
                       behavior: 'smooth'
                     });
                     setUnreadCount(0);
-                  }} className="ml-1 text-accent hover:underline">⇩ Latest</button>
+                  }} className="ml-1 text-accent hover:underline">⇩ {t('jumpLatest')}</button>
                   </div>}
                 {!atBottom && <Button type="button" variant="secondary" size="icon" aria-label="Jump to latest" className="pointer-events-auto rounded-full shadow-md" onClick={() => {
                   if (!msgsRef.current) return;
@@ -908,8 +914,8 @@ export default function Chat() {
             </div>
 
               <div ref={inputRef} className="sticky bottom-0 left-0 right-0 z-10 backdrop-blur-md bg-background/60 border-t border-border pt-3">
-                <ChatInput onSend={handleSend} input={input} setInput={setInput} />
-                <p className="px-4 pt-1 pb-3 text-[11px] text-muted-foreground">Enter = Send · Shift+Enter = New line</p>
+                <ChatInput onSend={handleSend} input={input} setInput={setInput} placeholder={t('inputPlaceholder')} />
+                <p className="px-4 pt-1 pb-3 text-[11px] text-muted-foreground">{t('inputHint')}</p>
               </div>
             </section>
           </div>
@@ -961,7 +967,7 @@ export default function Chat() {
                   duration: 0.14,
                   ease: "easeOut"
                 }
-              }} className={m.role === "assistant" ? "max-w-[72ch] rounded-2xl border border-[hsl(var(--chat-border))]/60 bg-[hsl(var(--chat-assistant))]/60 px-4 py-3 shadow-sm mt-5 select-text" : "ml-auto max-w-[72ch] rounded-2xl border border-[hsl(var(--chat-border))]/60 bg-[hsl(var(--chat-user))] px-4 py-3 shadow-sm group mt-5 select-text"} tabIndex={0} onKeyDown={e => {
+              }} className={m.role === "assistant" ? "max-w-[72ch] rounded-md border border-[hsl(var(--chat-border))] border-s-2 border-s-primary/60 bg-[hsl(var(--chat-assistant))] px-4 py-3 shadow-sm mt-5 select-text" : "ms-auto max-w-[72ch] rounded-md border border-primary/25 bg-[hsl(var(--chat-user))] px-4 py-3 shadow-sm group mt-5 select-text"} tabIndex={0} onKeyDown={e => {
                 if (e.key === 'ArrowDown') {
                   const next = e.currentTarget.nextElementSibling as HTMLElement | null;
                   next?.focus();
@@ -984,10 +990,10 @@ export default function Chat() {
                       <Skeleton className="h-3 w-6/12 rounded-2xl" />
                       <div className="mt-2 typing-dots"><span></span><span></span><span></span></div>
                     </div> : <div>
-                      <p className="text-sm leading-relaxed tracking-tight whitespace-pre-wrap break-words select-text" dangerouslySetInnerHTML={renderMessageHtml(m.content)} />
+                      <p className="text-[15px] leading-relaxed whitespace-pre-wrap break-words select-text" dangerouslySetInnerHTML={renderMessageHtml(m.content)} />
                       {m.canExpand && <div className="mt-2 flex justify-end">
                           <Button type="button" variant="secondary" size="sm" className="h-6 px-2" aria-label="Expand with AI" onClick={() => sendText(m.canExpand!.userText)}>
-                            Expand with AI
+                            {t('expandWithAi')}
                           </Button>
                         </div>}
                       {m.streaming && <div className="mt-1 typing-dots"><span></span><span></span><span></span></div>}
@@ -1012,17 +1018,25 @@ export default function Chat() {
                       </div>
                     </div>}
                 </motion.article>)}
+              {messages.length <= 1 && <div className="mt-8 animate-fade-in">
+                  <p className="meta-label mb-3">{t('suggestionsLabel')}</p>
+                  <div className="flex flex-wrap gap-2.5">
+                    {suggestedQA.map(q => <button key={q.id} type="button" onClick={() => handleSuggestedQAClick(q.id)} className="font-mono text-xs text-[hsl(var(--accent-2))] border border-border rounded-sm px-3.5 py-2 bg-transparent hover:border-[hsl(var(--accent-2))] hover:bg-[hsl(var(--accent-2))]/10 hover:text-foreground transition-colors">
+                        {lang === 'fr' ? q.label_fr : q.label_en}
+                      </button>)}
+                  </div>
+                </div>}
               <div ref={endRef} />
               <div className="pointer-events-none absolute right-3 bottom-28 flex flex-col gap-2 items-end">
                 {unreadCount > 0 && !atBottom && <div className="pointer-events-auto rounded-full bg-background/80 ring-1 ring-border/60 px-3 py-1 text-xs shadow-sm">
-                    New messages ({unreadCount}) <button onClick={() => {
+                    {t('newMessages')(unreadCount)} <button onClick={() => {
                     if (!msgsRef.current) return;
                     msgsRef.current.scrollTo({
                       top: msgsRef.current.scrollHeight,
                       behavior: 'smooth'
                     });
                     setUnreadCount(0);
-                  }} className="ml-1 text-accent hover:underline">⇩ Latest</button>
+                  }} className="ml-1 text-accent hover:underline">⇩ {t('jumpLatest')}</button>
                   </div>}
                 {!atBottom && <Button type="button" variant="secondary" size="icon" aria-label="Jump to latest" className="pointer-events-auto rounded-full shadow-md" onClick={() => {
                   if (!msgsRef.current) return;
@@ -1044,13 +1058,13 @@ export default function Chat() {
             </div>
 
             <div ref={inputRef} className="sticky bottom-0 inset-x-0 z-10 backdrop-blur bg-background/60 border-t border-border pt-2 pb-[max(env(safe-area-inset-bottom),8px)]">
-              <ChatInput onSend={handleSend} input={input} setInput={setInput} />
-              <p className="px-4 pt-1 pb-1 text-[11px] text-muted-foreground">Enter = Send · Shift+Enter = New line</p>
+              <ChatInput onSend={handleSend} input={input} setInput={setInput} placeholder={t('inputPlaceholder')} />
+              <p className="px-4 pt-1 pb-1 text-[11px] text-muted-foreground">{t('inputHint')}</p>
             </div>
           </div>
         )}
 
-        <div className="mt-6 text-center text-xs text-muted-foreground">Usage: {Math.min(userCount, MAX_QUESTIONS)}/{MAX_QUESTIONS}</div>
+        <div className="mt-6 text-center meta-label">{t('usageLabel')} · {Math.min(userCount, MAX_QUESTIONS)}/{MAX_QUESTIONS}</div>
         {userCount >= 5 && !limitReached && (
           <div className="mt-2 text-center text-xs text-muted-foreground">
             {lang === 'fr'
@@ -1060,7 +1074,7 @@ export default function Chat() {
               : `${MAX_QUESTIONS - userCount} question${MAX_QUESTIONS - userCount > 1 ? 's' : ''} left in this session. To go further: `}
             <a className="underline hover:text-foreground" href="https://www.linkedin.com/in/ayoub-el-yanboiy/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             {" · "}
-            <a className="underline hover:text-foreground" href="mailto:elyanboiyayoub@gmail.com">email</a>
+            <a className="underline hover:text-foreground" href="mailto:yanboiyayoub@gmail.com">email</a>
           </div>
         )}
         <footer className="mt-2 text-center text-xs text-muted-foreground">

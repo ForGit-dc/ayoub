@@ -46,10 +46,19 @@ This only changes tone/length; facts still follow the knowledge base and guardra
       currentWork: "What I did at Opinion Science"
     },
     
+    // Chat surface
+    expandWithAi: "Expand with AI",
+    inputPlaceholder: "Ask anything — language auto-detected",
+    inputHint: "Enter = Send · Shift+Enter = New line",
+    usageLabel: "Questions",
+    newMessages: (n: number) => `New messages (${n})`,
+    jumpLatest: "Latest",
+    suggestionsLabel: "Suggestions",
+
     // Language detection
     languagePreference: "Language preference",
     whichLanguage: "Which language do you prefer? English or French?",
-    
+
     // Debug
     debugInfo: "Debug Info",
     detectedLang: "Detected",
@@ -95,10 +104,19 @@ Cela ne change pas les faits : le bot reste fidèle à la base de connaissances 
       currentWork: "Mon stage chez Opinion Science"
     },
     
+    // Chat surface
+    expandWithAi: "Développer avec l'IA",
+    inputPlaceholder: "Pose ta question — langue détectée automatiquement",
+    inputHint: "Entrée = Envoyer · Maj+Entrée = Nouvelle ligne",
+    usageLabel: "Questions",
+    newMessages: (n: number) => `Nouveaux messages (${n})`,
+    jumpLatest: "Dernier",
+    suggestionsLabel: "Suggestions",
+
     // Language detection
     languagePreference: "Préférence linguistique",
     whichLanguage: "Vous préférez répondre en français ou en anglais ?",
-    
+
     // Debug
     debugInfo: "Infos Debug",
     detectedLang: "Détectée",
@@ -144,10 +162,19 @@ Cela ne change pas les faits : le bot reste fidèle à la base de connaissances 
       currentWork: "تدريبي في Opinion Science"
     },
     
+    // Chat surface
+    expandWithAi: "توسيع بالذكاء الاصطناعي",
+    inputPlaceholder: "اسأل ما تشاء — تُكتشف اللغة تلقائياً",
+    inputHint: "Enter = إرسال · Shift+Enter = سطر جديد",
+    usageLabel: "الأسئلة",
+    newMessages: (n: number) => `رسائل جديدة (${n})`,
+    jumpLatest: "الأحدث",
+    suggestionsLabel: "اقتراحات",
+
     // Language detection
     languagePreference: "تفضيل اللغة",
     whichLanguage: "أي لغة تفضل؟ الإنجليزية أم الفرنسية؟",
-    
+
     // Debug
     debugInfo: "معلومات التصحيح",
     detectedLang: "المكتشفة",
