@@ -10,98 +10,98 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Cuivre Editorial: aged copper on espresso with cream text, matching the landing identity (.lp). */
-    --background: 30 35% 7%;
-    --foreground: 36 33% 88%;
+    /* Encre & Ambre: amber gold on deep ink navy, matching the landing identity (.lp). */
+    --background: 220 49% 8%;
+    --foreground: 219 44% 94%;
 
-    --card: 30 36% 11%;
-    --card-foreground: 36 33% 88%;
+    --card: 218 45% 13%;
+    --card-foreground: 219 44% 94%;
 
-    --popover: 32 40% 10%;
-    --popover-foreground: 36 33% 88%;
+    --popover: 219 47% 11%;
+    --popover-foreground: 219 44% 94%;
 
-    --primary: 28 33% 49%;
-    --primary-foreground: 30 35% 7%;
+    --primary: 36 79% 57%;
+    --primary-foreground: 220 49% 8%;
 
-    --secondary: 30 35% 13%;
-    --secondary-foreground: 36 33% 88%;
+    --secondary: 218 40% 16%;
+    --secondary-foreground: 219 44% 94%;
 
-    --muted: 31 36% 11%;
-    --muted-foreground: 32 22% 66%;
+    --muted: 218 42% 13%;
+    --muted-foreground: 214 25% 68%;
 
-    --accent: 28 33% 49%;
-    --accent-foreground: 30 35% 7%;
-    /* Champagne highlight (--lp-accent-2 #D8B48C from the landing identity) */
-    --accent-2: 33 49% 70%;
+    --accent: 36 79% 57%;
+    --accent-foreground: 220 49% 8%;
+    /* Light-gold highlight (--lp-accent-2 #F2C77C from the landing identity) */
+    --accent-2: 38 82% 72%;
 
     /* Chat / hero background + bubble tokens */
-    --bg-slate-start: 30 35% 7%;    /* #17110B espresso */
-    --bg-slate-end: 30 38% 5%;      /* slightly darker */
-    --chat-user: 29 30% 17%;        /* user bubble, warmer + one step lighter */
-    --chat-assistant: 30 30% 12%;   /* assistant surface */
-    --chat-border: 30 26% 24%;
+    --bg-slate-start: 220 49% 8%;   /* #0B1220 ink */
+    --bg-slate-end: 220 52% 6%;     /* slightly darker */
+    --chat-user: 217 35% 19%;       /* user bubble, one step lighter */
+    --chat-assistant: 218 42% 12%;  /* assistant surface */
+    --chat-border: 217 32% 25%;
 
     --destructive: 0 70% 55%;
-    --destructive-foreground: 41 33% 95%;
+    --destructive-foreground: 219 44% 96%;
 
-    --border: 30 28% 20%;
-    --input: 30 28% 20%;
-    --ring: 28 33% 49%;
+    --border: 217 33% 21%;
+    --input: 217 33% 21%;
+    --ring: 36 79% 57%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 32 40% 10%;
-    --sidebar-foreground: 36 33% 88%;
-    --sidebar-primary: 28 33% 49%;
-    --sidebar-primary-foreground: 30 35% 7%;
-    --sidebar-accent: 31 36% 11%;
-    --sidebar-accent-foreground: 36 33% 88%;
-    --sidebar-border: 30 32% 17%;
-    --sidebar-ring: 28 33% 49%;
+    --sidebar-background: 219 47% 11%;
+    --sidebar-foreground: 219 44% 94%;
+    --sidebar-primary: 36 79% 57%;
+    --sidebar-primary-foreground: 220 49% 8%;
+    --sidebar-accent: 218 42% 13%;
+    --sidebar-accent-foreground: 219 44% 94%;
+    --sidebar-border: 217 33% 21%;
+    --sidebar-ring: 36 79% 57%;
   }
 
   .dark {
-    --background: 30 35% 7%;
-    --foreground: 36 33% 88%;
+    --background: 220 49% 8%;
+    --foreground: 219 44% 94%;
 
-    --card: 30 36% 11%;
-    --card-foreground: 36 33% 88%;
+    --card: 218 45% 13%;
+    --card-foreground: 219 44% 94%;
 
-    --popover: 32 40% 10%;
-    --popover-foreground: 36 33% 88%;
+    --popover: 219 47% 11%;
+    --popover-foreground: 219 44% 94%;
 
-    --primary: 28 33% 49%;
-    --primary-foreground: 30 35% 7%;
+    --primary: 36 79% 57%;
+    --primary-foreground: 220 49% 8%;
 
-    --secondary: 30 35% 13%;
-    --secondary-foreground: 36 33% 88%;
+    --secondary: 218 40% 16%;
+    --secondary-foreground: 219 44% 94%;
 
-    --muted: 31 36% 11%;
-    --muted-foreground: 32 22% 66%;
+    --muted: 218 42% 13%;
+    --muted-foreground: 214 25% 68%;
 
-    --accent: 28 33% 49%;
-    --accent-foreground: 30 35% 7%;
-    --accent-2: 33 49% 70%;
+    --accent: 36 79% 57%;
+    --accent-foreground: 220 49% 8%;
+    --accent-2: 38 82% 72%;
 
     --destructive: 0 70% 55%;
-    --destructive-foreground: 41 33% 95%;
+    --destructive-foreground: 219 44% 96%;
 
-    --border: 30 28% 20%;
-    --input: 30 28% 20%;
-    --ring: 28 33% 49%;
-    --bg-slate-start: 30 35% 7%;
-    --bg-slate-end: 30 38% 5%;
-    --chat-user: 29 30% 17%;
-    --chat-assistant: 30 30% 12%;
-    --chat-border: 30 26% 24%;
-    --sidebar-background: 32 40% 10%;
-    --sidebar-foreground: 36 33% 88%;
-    --sidebar-primary: 28 33% 49%;
-    --sidebar-primary-foreground: 30 35% 7%;
-    --sidebar-accent: 31 36% 11%;
-    --sidebar-accent-foreground: 36 33% 88%;
-    --sidebar-border: 30 32% 17%;
-    --sidebar-ring: 28 33% 49%;
+    --border: 217 33% 21%;
+    --input: 217 33% 21%;
+    --ring: 36 79% 57%;
+    --bg-slate-start: 220 49% 8%;
+    --bg-slate-end: 220 52% 6%;
+    --chat-user: 217 35% 19%;
+    --chat-assistant: 218 42% 12%;
+    --chat-border: 217 32% 25%;
+    --sidebar-background: 219 47% 11%;
+    --sidebar-foreground: 219 44% 94%;
+    --sidebar-primary: 36 79% 57%;
+    --sidebar-primary-foreground: 220 49% 8%;
+    --sidebar-accent: 218 42% 13%;
+    --sidebar-accent-foreground: 219 44% 94%;
+    --sidebar-border: 217 33% 21%;
+    --sidebar-ring: 36 79% 57%;
   }
 }
 
@@ -201,20 +201,20 @@ All colors MUST be HSL.
     width: 14px; 
   }
   .scrollbar-chat::-webkit-scrollbar-track {
-    background: #17110B;
+    background: #0B1220;
     border-radius: 10px;
   }
   .scrollbar-chat::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #A87B54 0%, #7E5B3B 100%);
+    background: linear-gradient(180deg, #E8A33D 0%, #A9752B 100%);
     border-radius: 10px;
-    border: 3px solid #17110B;
+    border: 3px solid #0B1220;
   }
   .scrollbar-chat::-webkit-scrollbar-thumb:hover {
-    background: #A87B54;
+    background: #E8A33D;
   }
   /* Firefox */
   .scrollbar-chat {
     scrollbar-width: thin;
-    scrollbar-color: #A87B54 #17110B;
+    scrollbar-color: #E8A33D #0B1220;
   }
 }

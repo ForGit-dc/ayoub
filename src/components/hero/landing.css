@@ -3,19 +3,17 @@
    chat and admin pages. */
 
 .lp {
-  /* Cuivre Editorial: warm editorial palette, aged copper on espresso with cream
-     text and a high-contrast serif display (Fraunces), magazine feel. Warm ground
-     (not cool like the reference petrol); copper kept as a DESATURATED metallic so
-     it reads antique-editorial and clears the distance gate against the reference
-     gold (different saturation strategy). */
-  --lp-ground: #17110B;
-  --lp-ground-2: #22190F;
-  --lp-surface: #261C12;
-  --lp-line: #3A2C1E;
-  --lp-text: #ECE3D4;
-  --lp-muted: #A99680;
-  --lp-accent: #A87B54;
-  --lp-accent-2: #D8B48C;
+  /* Encre & Ambre: deep ink-navy ground with warm amber-gold accents and a
+     high-contrast serif display (Fraunces), magazine feel. Cool ground + warm
+     metal keeps the editorial identity while reading crisp and technical. */
+  --lp-ground: #0B1220;
+  --lp-ground-2: #101A2C;
+  --lp-surface: #152238;
+  --lp-line: #253750;
+  --lp-text: #E8EDF6;
+  --lp-muted: #8CA0BC;
+  --lp-accent: #E8A33D;
+  --lp-accent-2: #F2C77C;
   --lp-display: "Fraunces", Georgia, "Times New Roman", serif;
   --lp-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
   --lp-sans: "Inter", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -95,7 +93,7 @@
 .lp .hero .ship { display: block; font-weight: 300; font-size: clamp(22px, 3.6vw, 40px); letter-spacing: -0.01em; color: var(--lp-muted); margin-top: 6px; }
 .lp .hero .ship b { color: var(--lp-text); font-weight: 600; }
 
-.lp .lede { margin-top: 28px; max-width: 52ch; font-size: clamp(16px, 1.7vw, 19px); color: #D8CDBB; }
+.lp .lede { margin-top: 28px; max-width: 52ch; font-size: clamp(16px, 1.7vw, 19px); color: #C9D4E5; }
 
 .lp .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
 .lp .btn {
@@ -106,7 +104,7 @@
 }
 .lp .btn .arr { transition: transform .2s; }
 .lp .btn:hover .arr { transform: translateX(4px); }
-.lp .btn-primary { background: var(--lp-accent); color: #17110B; border-color: var(--lp-accent); font-weight: 600; }
+.lp .btn-primary { background: var(--lp-accent); color: #0B1220; border-color: var(--lp-accent); font-weight: 600; }
 .lp .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -10px var(--lp-accent); }
 .lp .btn-ghost { color: var(--lp-text); }
 .lp .btn-ghost:hover { border-color: var(--lp-accent-2); color: #fff; }
@@ -146,7 +144,7 @@
 .lp .stat { background: var(--lp-ground-2); padding: 22px 16px; }
 .lp .stat .n { font-family: var(--lp-mono); font-weight: 600; font-size: clamp(20px, 3vw, 30px); color: var(--lp-accent); letter-spacing: -0.01em; }
 .lp .stat .l { font-family: var(--lp-mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lp-muted); margin-top: 7px; line-height: 1.4; }
-.lp .sig-note { margin-top: 26px; max-width: 60ch; color: #D8CDBB; }
+.lp .sig-note { margin-top: 26px; max-width: 60ch; color: #C9D4E5; }
 .lp .links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; font-family: var(--lp-mono); font-size: 13px; }
 .lp .links a { color: var(--lp-accent-2); border-bottom: 1px solid transparent; transition: border-color .2s; }
 .lp .links a:hover { border-bottom-color: var(--lp-accent-2); }
@@ -222,7 +220,7 @@
 .lp .ni-viewport iframe { position: absolute; top: 0; left: 0; width: 1280px; height: 800px; transform-origin: top left; border: 0; pointer-events: none; }
 .lp .ni-overlay { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; padding: 22px; text-decoration: none; background: linear-gradient(180deg, transparent 55%, color-mix(in srgb, var(--lp-ground) 80%, transparent)); transition: background .25s; }
 .lp .ni-overlay:hover { background: linear-gradient(180deg, color-mix(in srgb, var(--lp-ground) 28%, transparent), color-mix(in srgb, var(--lp-ground) 88%, transparent)); }
-.lp .ni-open { font-family: var(--lp-mono); font-size: 13px; padding: 12px 20px; border-radius: 4px; background: var(--lp-accent); color: #17110B; font-weight: 600; box-shadow: 0 10px 30px -10px var(--lp-accent); transition: transform .15s; }
+.lp .ni-open { font-family: var(--lp-mono); font-size: 13px; padding: 12px 20px; border-radius: 4px; background: var(--lp-accent); color: #0B1220; font-weight: 600; box-shadow: 0 10px 30px -10px var(--lp-accent); transition: transform .15s; }
 .lp .ni-overlay:hover .ni-open { transform: translateY(-2px); }
 @media (max-width: 600px) { .lp .ni-viewport { height: 320px; } }
 
@@ -247,7 +245,7 @@
 .lp .chatbar:focus-within { border-color: var(--lp-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--lp-accent) 22%, transparent); }
 .lp .chatbar-input { flex: 1; background: none; border: 0; outline: none; color: var(--lp-text); font-family: var(--lp-sans); font-size: 16px; min-width: 0; }
 .lp .chatbar-input::placeholder { color: var(--lp-muted); }
-.lp .chatbar-send { display: inline-flex; align-items: center; gap: 8px; background: var(--lp-accent); color: #17110B; border: 0; border-radius: 7px; padding: 11px 18px; font-family: var(--lp-mono); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: transform .15s, box-shadow .2s; }
+.lp .chatbar-send { display: inline-flex; align-items: center; gap: 8px; background: var(--lp-accent); color: #0B1220; border: 0; border-radius: 7px; padding: 11px 18px; font-family: var(--lp-mono); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: transform .15s, box-shadow .2s; }
 .lp .chatbar-send:hover { transform: translateY(-1px); box-shadow: 0 8px 22px -8px var(--lp-accent); }
 .lp .chatbar-send .arr { transition: transform .2s; }
 .lp .chatbar-send:hover .arr { transform: translateX(3px); }
