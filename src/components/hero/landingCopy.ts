@@ -1,0 +1,201 @@
+// Trilingual copy for the landing page (EN / FR / AR).
+// Technical terms (GCP, AWS, Kafka, UMAP, HDBSCAN, GPT-4o, model names) are kept in English.
+
+export type LandingLang = "en" | "fr" | "ar";
+
+export const LANDING_COPY = {
+  en: {
+    nav: { investigation: "Flagship", track: "Track record", signals: "Projects", contact: "Contact" },
+    eyebrow: "Data Engineer · Cloud (GCP & AWS) · ENSAI",
+    hero: { l1: "I build the ", glow: "pipelines", l2: " that make data speak.", shipPre: "And I ", shipStrong: "ship them to the cloud." },
+    lede: "Data engineering on GCP and AWS. I turn massive, multi-source streams into data that is ready for analytics and LLMs.",
+    chat: { placeholder: "Ask my AI anything about my work", send: "Ask" },
+    chips: [
+      { label: "30-second intro", q: "Give me a 30-second intro." },
+      { label: "Your cloud pipeline?", q: "Tell me about your cloud pipeline at Opinion Science." },
+      { label: "Concrete impact?", q: "What concrete impact have you delivered?" },
+      { label: "Why hire you?", q: "Why should we hire you? What makes you stand out?" },
+    ],
+    seeInv: "See the flagship project",
+    status: { prefix: "AVAILABLE", role: "Data / Cloud Engineer", loc: "Paris, France" },
+    readout: { lab: "The readout", h2: "An engineer who thinks in pipelines." },
+    card: {
+      role: "Role", base: "Base", degrees: "Degree", focus: "Focus", cloud: "Stack", languages: "Languages",
+      roleV: "Data Engineer", baseV: "Paris, France · EU", degreesV: "ENSAI (Data Engineering)", focusV: "Cloud · Big Data · DevOps", cloudV: "GCP · AWS · Kafka · Terraform", languagesV: "FR · EN · العربية",
+    },
+    bio: {
+      p1: "I bridge data engineering and statistics. I do not just move data, I build the pipelines, the orchestration and the storage that let a team analyze it at scale and trust it in production.",
+      quote: "From multi-source collection to LLM analysis, I build the full chain.",
+      sig: "// data engineering at ENSAI · DataCamp-certified Data Engineer · GCP & AWS",
+    },
+    inv: { lab: "End-of-studies project · Opinion Science", titlePre: "A cloud infrastructure against ", titleEm: "disinformation", titlePost: "." },
+    stats: [
+      "unique segments after deduplication (from 203,456)",
+      "thematic clusters (UMAP + HDBSCAN)",
+      "of the corpus covered by clusters",
+      "embedding dimensions (all-mpnet-base-v2)",
+      "clusters validated by GPT-4o annotation",
+      "of LLM annotation, versus ~83 h direct",
+    ],
+    sigNote: "My end-of-studies project at Opinion Science: a cloud chain that collects, processes and analyzes online content to feed LLMs on disinformation. Multi-source ingestion (Twitter, TikTok, Telegram) on GCP (Cloud Functions, Cloud Tasks), Apache Kafka orchestration, hybrid PostgreSQL + BigQuery storage, and semantic UMAP + HDBSCAN clustering annotated by GPT-4o.",
+    track: {
+      lab: "Track record", h2: "From raw data to production.",
+      items: [
+        { title: "Data Engineer, end-of-studies internship", org: " · Opinion Science", metric: "203,456 segments · ~10x", desc: "Cloud infrastructure on GCP (Cloud Functions, Cloud Tasks), an Apache Kafka bus, hybrid PostgreSQL + BigQuery storage, and UMAP + HDBSCAN clustering annotated by GPT-4o.", when: "MAY-OCT 2025" },
+        { title: "Data Scientist, internship", org: " · INED", metric: "18,000+ children", desc: "Structured the ELFE cohort (10-year follow-up), logistic-regression modeling of mental-health determinants (SDQ), model selection by AIC, in R.", when: "JUN-AUG 2024" },
+        { title: "Engineering degree, Data Science", org: " · ENSAI", metric: "Data Engineering track", desc: "Specialization in Data Engineering. Key courses: Machine Learning, Cloud Computing, DevOps.", when: "2022-2025" },
+        { title: "Data Engineer certification", org: " · DataCamp", metric: "certified 2026", desc: "Professional Data Engineer certification (Python, SQL, data pipelines).", when: "MAR 2026" },
+      ],
+    },
+    proof: {
+      lab: "Proof, in numbers", h2: "Outcomes I can defend.",
+      desc: [
+        "text segments processed in the cloud analysis pipeline (Opinion Science)",
+        "LLM annotation time cut (~83 h to ~8 h) via clustering (Opinion Science)",
+        "children followed over 10 years, ELFE cohort (INED)",
+        "on the TOEIC, English B2+",
+        "source platforms orchestrated in real time via Apache Kafka",
+        "clouds in production (GCP and AWS), with Terraform, Docker and CI/CD",
+      ],
+    },
+    signals: {
+      lab: "Projects", h2: "What I have built.",
+      serverless: { tag: "Academic project · AWS", title: "Serverless Cloud Architecture (Postagram)", desc: "A fully Infrastructure-as-Code serverless application on AWS (Terraform, VPC, ASG). An event-driven S3 / Lambda pipeline analyzes images with Amazon Rekognition and indexes results in DynamoDB.", chips: ["Terraform", "AWS Lambda", "Rekognition", "DynamoDB"] },
+      api: { tag: "Academic project · Backend", title: "REST API industrialization", desc: "A containerized REST API (Spring Boot, Java 21) with Docker and a full GitLab CI/CD pipeline (JUnit tests, build, deploy to AWS).", chips: ["Java 21", "Spring Boot", "Docker", "GitLab CI"] },
+      nlp: { tag: "Academic project · NLP", title: "NLP & Topic Modeling pipeline", desc: "Massive text processing of a citizen consultation (Spacy, Word2Vec) with unsupervised modeling (LDA, K-Means) to extract themes.", chips: ["Spacy", "Word2Vec", "LDA", "K-Means"] },
+      cert: { tag: "Certification · DataCamp", title: "Data Engineer (DataCamp)", desc: "Professional Data Engineer certification, issued March 2026. Foundations: Python, SQL, orchestration and data pipelines.", chips: ["Python", "SQL", "PySpark", "ETL"] },
+    },
+    talk: { eyebrow: "Do not read a CV. Interrogate it.", h2pre: "Talk to ", h2em: "my model", lede: "I built a grounded AI that answers as me, in French, English or Arabic. Ask it about a project, a metric, or how I would approach your problem.", open: "Open the chat" },
+    footer: { left: "© 2026 Ayoub El Yanboiy · Conversational portfolio", baraka: "Built to ship." },
+  },
+
+  fr: {
+    nav: { investigation: "Projet phare", track: "Parcours", signals: "Projets", contact: "Contact" },
+    eyebrow: "Data Engineer · Cloud (GCP & AWS) · ENSAI",
+    hero: { l1: "Je construis les ", glow: "pipelines", l2: " qui font parler la donnée.", shipPre: "Et je les ", shipStrong: "industrialise dans le cloud." },
+    lede: "Data engineering sur GCP et AWS. Je transforme des flux massifs et multi-sources en données prêtes pour l'analyse et les LLM.",
+    chat: { placeholder: "Pose ta question sur mon travail", send: "Demander" },
+    chips: [
+      { label: "Intro en 30 s", q: "Présente-toi en 30 secondes." },
+      { label: "Ton pipeline cloud ?", q: "Parle-moi de ton pipeline cloud chez Opinion Science." },
+      { label: "Ton impact concret ?", q: "Quel impact concret as-tu livré ?" },
+      { label: "Pourquoi te recruter ?", q: "Pourquoi devrait-on te recruter ? Qu'est-ce qui te distingue ?" },
+    ],
+    seeInv: "Voir le projet phare",
+    status: { prefix: "DISPONIBLE", role: "Data / Cloud Engineer", loc: "Paris, France" },
+    readout: { lab: "Le profil", h2: "Un ingénieur qui pense en pipelines." },
+    card: {
+      role: "Poste", base: "Lieu", degrees: "Diplôme", focus: "Focus", cloud: "Stack", languages: "Langues",
+      roleV: "Data Engineer", baseV: "Paris, France · UE", degreesV: "ENSAI (Ingénierie des Données)", focusV: "Cloud · Big Data · DevOps", cloudV: "GCP · AWS · Kafka · Terraform", languagesV: "FR · EN · العربية",
+    },
+    bio: {
+      p1: "Je fais le lien entre l'ingénierie des données et les statistiques. Je ne fais pas que déplacer la donnée : je construis les pipelines, l'orchestration et le stockage qui permettent à une équipe de l'analyser à l'échelle et de lui faire confiance en production.",
+      quote: "De la collecte multi-sources jusqu'à l'analyse par LLM, je construis la chaîne complète.",
+      sig: "// ingénierie des données à l'ENSAI · Data Engineer certifié DataCamp · GCP & AWS",
+    },
+    inv: { lab: "Projet de fin d'études · Opinion Science", titlePre: "Une infrastructure cloud contre la ", titleEm: "désinformation", titlePost: "." },
+    stats: [
+      "segments uniques après déduplication (de 203 456 au départ)",
+      "clusters thématiques (UMAP + HDBSCAN)",
+      "du corpus couvert par les clusters",
+      "dimensions d'embeddings (all-mpnet-base-v2)",
+      "clusters validés par annotation GPT-4o",
+      "d'annotation LLM, contre ~83 h en direct",
+    ],
+    sigNote: "Mon projet de fin d'études chez Opinion Science : une chaîne cloud qui collecte, traite et analyse des contenus en ligne pour alimenter des LLM sur la désinformation. Ingestion multi-sources (Twitter, TikTok, Telegram) sur GCP (Cloud Functions, Cloud Tasks), orchestration Apache Kafka, stockage hybride PostgreSQL + BigQuery, et clustering sémantique UMAP + HDBSCAN annoté par GPT-4o.",
+    track: {
+      lab: "Parcours", h2: "De la donnée brute à la production.",
+      items: [
+        { title: "Data Engineer, stage de fin d'études", org: " · Opinion Science", metric: "203 456 segments · ~10x", desc: "Infrastructure cloud sur GCP (Cloud Functions, Cloud Tasks), un bus Apache Kafka, un stockage hybride PostgreSQL + BigQuery, et un clustering UMAP + HDBSCAN annoté par GPT-4o.", when: "MAI-OCT 2025" },
+        { title: "Data Scientist, stage", org: " · INED", metric: "18 000+ enfants", desc: "Structuration de la cohorte ELFE (suivi sur 10 ans), régressions logistiques des déterminants de la santé mentale (SDQ), sélection par AIC, en R.", when: "JUIN-AOÛT 2024" },
+        { title: "Diplôme d'ingénieur, Data Science", org: " · ENSAI", metric: "Ingénierie des Données", desc: "Spécialisation Ingénierie des Données. Cours clés : Machine Learning, Cloud Computing, DevOps.", when: "2022-2025" },
+        { title: "Certification Data Engineer", org: " · DataCamp", metric: "certifié 2026", desc: "Certification professionnelle Data Engineer (Python, SQL, pipelines de données).", when: "MARS 2026" },
+      ],
+    },
+    proof: {
+      lab: "Les preuves, en chiffres", h2: "Des résultats que je peux défendre.",
+      desc: [
+        "segments textuels traités dans le pipeline cloud d'analyse (Opinion Science)",
+        "temps d'annotation LLM divisé (~83 h vers ~8 h) par clustering (Opinion Science)",
+        "enfants suivis sur 10 ans, cohorte ELFE (INED)",
+        "au TOEIC, anglais B2+",
+        "plateformes sources orchestrées en temps réel via Apache Kafka",
+        "clouds en production (GCP et AWS), avec Terraform, Docker et CI/CD",
+      ],
+    },
+    signals: {
+      lab: "Projets", h2: "Ce que j'ai construit.",
+      serverless: { tag: "Projet académique · AWS", title: "Architecture Cloud Serverless (Postagram)", desc: "Application serverless entièrement en Infrastructure as Code sur AWS (Terraform, VPC, ASG). Un pipeline événementiel S3 / Lambda analyse les images via Amazon Rekognition et indexe les résultats dans DynamoDB.", chips: ["Terraform", "AWS Lambda", "Rekognition", "DynamoDB"] },
+      api: { tag: "Projet académique · Backend", title: "Industrialisation d'une API REST", desc: "Une API REST conteneurisée (Spring Boot, Java 21) avec Docker et une chaîne CI/CD complète sur GitLab (tests JUnit, build, déploiement AWS).", chips: ["Java 21", "Spring Boot", "Docker", "GitLab CI"] },
+      nlp: { tag: "Projet académique · NLP", title: "Pipeline NLP & Topic Modeling", desc: "Traitement textuel massif d'une consultation citoyenne (Spacy, Word2Vec) et modélisation non-supervisée (LDA, K-Means) pour extraire les thèmes.", chips: ["Spacy", "Word2Vec", "LDA", "K-Means"] },
+      cert: { tag: "Certification · DataCamp", title: "Data Engineer (DataCamp)", desc: "Certification professionnelle Data Engineer, délivrée en mars 2026. Socle : Python, SQL, orchestration et pipelines de données.", chips: ["Python", "SQL", "PySpark", "ETL"] },
+    },
+    talk: { eyebrow: "Ne lis pas un CV. Interroge-le.", h2pre: "Parle à ", h2em: "mon modèle", lede: "J'ai construit une IA ancrée qui répond à ma place, en français, anglais ou arabe. Pose-lui une question sur un projet, une métrique, ou comment j'aborderais ton problème.", open: "Ouvrir le chat" },
+    footer: { left: "© 2026 Ayoub El Yanboiy · Portfolio conversationnel", baraka: "Fait pour la production." },
+  },
+
+  ar: {
+    nav: { investigation: "المشروع الأبرز", track: "المسار", signals: "المشاريع", contact: "تواصل" },
+    eyebrow: "مهندس بيانات · Cloud (GCP & AWS) · ENSAI",
+    hero: { l1: "أبني ", glow: "خطوط البيانات", l2: " التي تجعل البيانات تتكلّم.", shipPre: "و", shipStrong: "أنقلها إلى السحابة." },
+    lede: "هندسة بيانات على GCP و AWS. أحوّل التدفقات الضخمة ومتعددة المصادر إلى بيانات جاهزة للتحليل ولنماذج LLM.",
+    chat: { placeholder: "اسأل عن عملي", send: "اسأل" },
+    chips: [
+      { label: "تعريف في 30 ثانية", q: "قدّم نفسك في 30 ثانية." },
+      { label: "خط أنابيبك السحابي؟", q: "حدّثني عن خط أنابيبك السحابي في Opinion Science." },
+      { label: "أثرك الملموس؟", q: "ما هو الأثر الملموس الذي حققته؟" },
+      { label: "لماذا نوظّفك؟", q: "لماذا يجب أن نوظّفك؟ ما الذي يميّزك؟" },
+    ],
+    seeInv: "شاهد المشروع الأبرز",
+    status: { prefix: "متاح", role: "Data / Cloud Engineer", loc: "باريس، فرنسا" },
+    readout: { lab: "الملف", h2: "مهندس يفكّر بخطوط البيانات." },
+    card: {
+      role: "المنصب", base: "المكان", degrees: "الشهادة", focus: "التركيز", cloud: "التقنيات", languages: "اللغات",
+      roleV: "Data Engineer", baseV: "باريس، فرنسا · الاتحاد الأوروبي", degreesV: "ENSAI (هندسة البيانات)", focusV: "Cloud · Big Data · DevOps", cloudV: "GCP · AWS · Kafka · Terraform", languagesV: "FR · EN · العربية",
+    },
+    bio: {
+      p1: "أربط بين هندسة البيانات والإحصاء. لا أكتفي بنقل البيانات، بل أبني الـ pipelines والتنسيق والتخزين التي تتيح لفريق تحليلها على نطاق واسع والثقة بها في الإنتاج.",
+      quote: "من الجمع متعدد المصادر حتى التحليل عبر LLM، أبني السلسلة الكاملة.",
+      sig: "// هندسة بيانات في ENSAI · مهندس بيانات معتمد من DataCamp · GCP و AWS",
+    },
+    inv: { lab: "مشروع نهاية الدراسة · Opinion Science", titlePre: "بنية تحتية سحابية لمواجهة ", titleEm: "التضليل", titlePost: "." },
+    stats: [
+      "مقطعاً فريداً بعد إزالة التكرار (من 203٬456)",
+      "مجموعة موضوعية (UMAP + HDBSCAN)",
+      "من المتن مغطى بالمجموعات",
+      "بُعداً للتضمين (all-mpnet-base-v2)",
+      "مجموعة مُعتمدة بتوسيم GPT-4o",
+      "لتوسيم الـ LLM، مقابل ~83 ساعة مباشرةً",
+    ],
+    sigNote: "مشروع تخرّجي في Opinion Science: سلسلة سحابية تجمع وتعالج وتحلّل المحتوى على الإنترنت لتغذية نماذج LLM حول التضليل. جمع متعدد المصادر (Twitter، TikTok، Telegram) على GCP (Cloud Functions، Cloud Tasks)، تنسيق عبر Apache Kafka، تخزين هجين PostgreSQL + BigQuery، وتجميع دلالي UMAP + HDBSCAN موسوم بـ GPT-4o.",
+    track: {
+      lab: "المسار", h2: "من البيانات الخام إلى الإنتاج.",
+      items: [
+        { title: "Data Engineer، تدريب نهاية الدراسة", org: " · Opinion Science", metric: "203٬456 مقطع · ~10x", desc: "بنية تحتية سحابية على GCP (Cloud Functions، Cloud Tasks)، ناقل Apache Kafka، تخزين هجين PostgreSQL + BigQuery، وتجميع UMAP + HDBSCAN موسوم بـ GPT-4o.", when: "مايو-أكتوبر 2025" },
+        { title: "Data Scientist، تدريب", org: " · INED", metric: "18٬000+ طفل", desc: "هيكلة دراسة ELFE (متابعة 10 سنوات)، انحدار لوجستي لمحددات الصحة النفسية (SDQ)، اختيار النماذج بمعيار AIC، بلغة R.", when: "يونيو-أغسطس 2024" },
+        { title: "دبلوم مهندس، Data Science", org: " · ENSAI", metric: "هندسة البيانات", desc: "تخصص هندسة البيانات. مقررات أساسية: Machine Learning، Cloud Computing، DevOps.", when: "2022-2025" },
+        { title: "شهادة Data Engineer", org: " · DataCamp", metric: "معتمد 2026", desc: "شهادة مهنية Data Engineer (Python، SQL، خطوط بيانات).", when: "مارس 2026" },
+      ],
+    },
+    proof: {
+      lab: "البراهين بالأرقام", h2: "نتائج أستطيع الدفاع عنها.",
+      desc: [
+        "مقطعاً نصياً معالجاً في خط الأنابيب السحابي للتحليل (Opinion Science)",
+        "خفض زمن توسيم الـ LLM (~83 ساعة إلى ~8 ساعات) عبر التجميع (Opinion Science)",
+        "طفلاً تُوبعوا على مدى 10 سنوات، دراسة ELFE (INED)",
+        "في اختبار TOEIC، إنجليزية B2+",
+        "منصات مصدرية منسّقة في الوقت الحقيقي عبر Apache Kafka",
+        "سحابتان في الإنتاج (GCP و AWS)، مع Terraform و Docker و CI/CD",
+      ],
+    },
+    signals: {
+      lab: "المشاريع", h2: "ما الذي بنيتُه.",
+      serverless: { tag: "مشروع أكاديمي · AWS", title: "بنية سحابية Serverless (Postagram)", desc: "تطبيق serverless بالكامل عبر Infrastructure as Code على AWS (Terraform، VPC، ASG). خط أنابيب حَدَثي S3 / Lambda يحلّل الصور عبر Amazon Rekognition ويفهرس النتائج في DynamoDB.", chips: ["Terraform", "AWS Lambda", "Rekognition", "DynamoDB"] },
+      api: { tag: "مشروع أكاديمي · Backend", title: "تصنيع واجهة REST", desc: "واجهة REST محوّاة (Spring Boot، Java 21) مع Docker وسلسلة CI/CD كاملة على GitLab (اختبارات JUnit، بناء، نشر على AWS).", chips: ["Java 21", "Spring Boot", "Docker", "GitLab CI"] },
+      nlp: { tag: "مشروع أكاديمي · NLP", title: "خط NLP و Topic Modeling", desc: "معالجة نصية ضخمة لاستشارة مواطنين (Spacy، Word2Vec) ونمذجة غير موجّهة (LDA، K-Means) لاستخراج المواضيع.", chips: ["Spacy", "Word2Vec", "LDA", "K-Means"] },
+      cert: { tag: "شهادة · DataCamp", title: "Data Engineer (DataCamp)", desc: "شهادة مهنية Data Engineer، صادرة في مارس 2026. الأساسيات: Python، SQL، التنسيق وخطوط البيانات.", chips: ["Python", "SQL", "PySpark", "ETL"] },
+    },
+    talk: { eyebrow: "لا تقرأ السيرة، استجوبها.", h2pre: "تحدّث إلى ", h2em: "نموذجي", lede: "بنيتُ ذكاءً اصطناعياً مُؤصَّلاً يجيب بالنيابة عني، بالعربية والفرنسية والإنجليزية. اسأله عن مشروع، أو رقم، أو كيف سأتعامل مع مشكلتك.", open: "افتح المحادثة" },
+    footer: { left: "© 2026 أيوب اليانبوي · بورتفوليو تفاعلي", baraka: "صُنع للإنتاج." },
+  },
+};
