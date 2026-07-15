@@ -35,13 +35,13 @@ export const LANDING_COPY = {
       "of the corpus covered by clusters",
       "embedding dimensions (all-mpnet-base-v2)",
       "clusters validated by GPT-4o annotation",
-      "of LLM annotation, versus ~83 h direct",
+      "mean cluster persistence (assignment robustness)",
     ],
     sigNote: "My end-of-studies project at Opinion Science: a cloud chain that collects, processes and analyzes online content to feed LLMs on disinformation. Multi-source ingestion (Twitter, TikTok, Telegram) on GCP (Cloud Functions, Cloud Tasks), Apache Kafka orchestration, hybrid PostgreSQL + BigQuery storage, and semantic UMAP + HDBSCAN clustering annotated by GPT-4o.",
     track: {
       lab: "Track record", h2: "From raw data to production.",
       items: [
-        { title: "Data Engineer, end-of-studies internship", org: " · Opinion Science", metric: "203,456 segments · ~10x", desc: "Cloud infrastructure on GCP (Cloud Functions, Cloud Tasks), an Apache Kafka bus, hybrid PostgreSQL + BigQuery storage, and UMAP + HDBSCAN clustering annotated by GPT-4o.", when: "MAY-OCT 2025" },
+        { title: "Data Engineer, end-of-studies internship", org: " · Opinion Science", metric: "203,456 segments · 142 clusters", desc: "Cloud infrastructure on GCP (Cloud Functions, Cloud Tasks), an Apache Kafka bus, hybrid PostgreSQL + BigQuery storage, and UMAP + HDBSCAN clustering annotated by GPT-4o.", when: "MAY-OCT 2025" },
         { title: "Data Scientist, internship", org: " · INED", metric: "18,000+ children", desc: "Structured the ELFE cohort (10-year follow-up), logistic-regression modeling of mental-health determinants (SDQ), model selection by AIC, in R.", when: "JUN-AUG 2024" },
         { title: "Engineering degree, Data Science", org: " · ENSAI", metric: "Data Engineering track", desc: "Specialization in Data Engineering. Key courses: Machine Learning, Cloud Computing, DevOps.", when: "2022-2025" },
         { title: "Data Engineer certification", org: " · DataCamp", metric: "certified 2026", desc: "Professional Data Engineer certification (Python, SQL, data pipelines).", when: "MAR 2026" },
@@ -51,7 +51,7 @@ export const LANDING_COPY = {
       lab: "Proof, in numbers", h2: "Outcomes I can defend.",
       desc: [
         "text segments processed in the cloud analysis pipeline (Opinion Science)",
-        "LLM annotation time cut (~83 h to ~8 h) via clustering (Opinion Science)",
+        "of exact duplicates removed (15,242), corpus reduced to 90,000 unique segments (Opinion Science)",
         "children followed over 10 years, ELFE cohort (INED)",
         "on the TOEIC, English B2+",
         "source platforms orchestrated in real time via Apache Kafka",
@@ -100,13 +100,13 @@ export const LANDING_COPY = {
       "du corpus couvert par les clusters",
       "dimensions d'embeddings (all-mpnet-base-v2)",
       "clusters validés par annotation GPT-4o",
-      "d'annotation LLM, contre ~83 h en direct",
+      "persistance moyenne des clusters (robustesse des assignations)",
     ],
     sigNote: "Mon projet de fin d'études chez Opinion Science : une chaîne cloud qui collecte, traite et analyse des contenus en ligne pour alimenter des LLM sur la désinformation. Ingestion multi-sources (Twitter, TikTok, Telegram) sur GCP (Cloud Functions, Cloud Tasks), orchestration Apache Kafka, stockage hybride PostgreSQL + BigQuery, et clustering sémantique UMAP + HDBSCAN annoté par GPT-4o.",
     track: {
       lab: "Parcours", h2: "De la donnée brute à la production.",
       items: [
-        { title: "Data Engineer, stage de fin d'études", org: " · Opinion Science", metric: "203 456 segments · ~10x", desc: "Infrastructure cloud sur GCP (Cloud Functions, Cloud Tasks), un bus Apache Kafka, un stockage hybride PostgreSQL + BigQuery, et un clustering UMAP + HDBSCAN annoté par GPT-4o.", when: "MAI-OCT 2025" },
+        { title: "Data Engineer, stage de fin d'études", org: " · Opinion Science", metric: "203 456 segments · 142 clusters", desc: "Infrastructure cloud sur GCP (Cloud Functions, Cloud Tasks), un bus Apache Kafka, un stockage hybride PostgreSQL + BigQuery, et un clustering UMAP + HDBSCAN annoté par GPT-4o.", when: "MAI-OCT 2025" },
         { title: "Data Scientist, stage", org: " · INED", metric: "18 000+ enfants", desc: "Structuration de la cohorte ELFE (suivi sur 10 ans), régressions logistiques des déterminants de la santé mentale (SDQ), sélection par AIC, en R.", when: "JUIN-AOÛT 2024" },
         { title: "Diplôme d'ingénieur, Data Science", org: " · ENSAI", metric: "Ingénierie des Données", desc: "Spécialisation Ingénierie des Données. Cours clés : Machine Learning, Cloud Computing, DevOps.", when: "2022-2025" },
         { title: "Certification Data Engineer", org: " · DataCamp", metric: "certifié 2026", desc: "Certification professionnelle Data Engineer (Python, SQL, pipelines de données).", when: "MARS 2026" },
@@ -116,7 +116,7 @@ export const LANDING_COPY = {
       lab: "Les preuves, en chiffres", h2: "Des résultats que je peux défendre.",
       desc: [
         "segments textuels traités dans le pipeline cloud d'analyse (Opinion Science)",
-        "temps d'annotation LLM divisé (~83 h vers ~8 h) par clustering (Opinion Science)",
+        "de doublons exacts retirés (15 242), corpus ramené à 90 000 segments uniques (Opinion Science)",
         "enfants suivis sur 10 ans, cohorte ELFE (INED)",
         "au TOEIC, anglais B2+",
         "plateformes sources orchestrées en temps réel via Apache Kafka",
@@ -165,13 +165,13 @@ export const LANDING_COPY = {
       "من المتن مغطى بالمجموعات",
       "بُعداً للتضمين (all-mpnet-base-v2)",
       "مجموعة مُعتمدة بتوسيم GPT-4o",
-      "لتوسيم الـ LLM، مقابل ~83 ساعة مباشرةً",
+      "متوسط ثبات المجموعات (متانة الإسنادات)",
     ],
     sigNote: "مشروع تخرّجي في Opinion Science: سلسلة سحابية تجمع وتعالج وتحلّل المحتوى على الإنترنت لتغذية نماذج LLM حول التضليل. جمع متعدد المصادر (Twitter، TikTok، Telegram) على GCP (Cloud Functions، Cloud Tasks)، تنسيق عبر Apache Kafka، تخزين هجين PostgreSQL + BigQuery، وتجميع دلالي UMAP + HDBSCAN موسوم بـ GPT-4o.",
     track: {
       lab: "المسار", h2: "من البيانات الخام إلى الإنتاج.",
       items: [
-        { title: "Data Engineer، تدريب نهاية الدراسة", org: " · Opinion Science", metric: "203٬456 مقطع · ~10x", desc: "بنية تحتية سحابية على GCP (Cloud Functions، Cloud Tasks)، ناقل Apache Kafka، تخزين هجين PostgreSQL + BigQuery، وتجميع UMAP + HDBSCAN موسوم بـ GPT-4o.", when: "مايو-أكتوبر 2025" },
+        { title: "Data Engineer، تدريب نهاية الدراسة", org: " · Opinion Science", metric: "203٬456 مقطع · 142 مجموعة", desc: "بنية تحتية سحابية على GCP (Cloud Functions، Cloud Tasks)، ناقل Apache Kafka، تخزين هجين PostgreSQL + BigQuery، وتجميع UMAP + HDBSCAN موسوم بـ GPT-4o.", when: "مايو-أكتوبر 2025" },
         { title: "Data Scientist، تدريب", org: " · INED", metric: "18٬000+ طفل", desc: "هيكلة دراسة ELFE (متابعة 10 سنوات)، انحدار لوجستي لمحددات الصحة النفسية (SDQ)، اختيار النماذج بمعيار AIC، بلغة R.", when: "يونيو-أغسطس 2024" },
         { title: "دبلوم مهندس، Data Science", org: " · ENSAI", metric: "هندسة البيانات", desc: "تخصص هندسة البيانات. مقررات أساسية: Machine Learning، Cloud Computing، DevOps.", when: "2022-2025" },
         { title: "شهادة Data Engineer", org: " · DataCamp", metric: "معتمد 2026", desc: "شهادة مهنية Data Engineer (Python، SQL، خطوط بيانات).", when: "مارس 2026" },
@@ -181,7 +181,7 @@ export const LANDING_COPY = {
       lab: "البراهين بالأرقام", h2: "نتائج أستطيع الدفاع عنها.",
       desc: [
         "مقطعاً نصياً معالجاً في خط الأنابيب السحابي للتحليل (Opinion Science)",
-        "خفض زمن توسيم الـ LLM (~83 ساعة إلى ~8 ساعات) عبر التجميع (Opinion Science)",
+        "من التكرارات الدقيقة أُزيلت (15٬242)، وتقلّص المتن إلى 90٬000 مقطع فريد (Opinion Science)",
         "طفلاً تُوبعوا على مدى 10 سنوات، دراسة ELFE (INED)",
         "في اختبار TOEIC، إنجليزية B2+",
         "منصات مصدرية منسّقة في الوقت الحقيقي عبر Apache Kafka",

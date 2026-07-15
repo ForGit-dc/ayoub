@@ -11,10 +11,10 @@ const EMAIL = "elyanboiyayoub@gmail.com";
 
 // Flagship case-study numbers (Opinion Science, Twitter corpus Sept 2025).
 // Aligned one-to-one with LANDING_COPY.<lang>.stats.
-const STATS = ["90 000", "142", "88%", "768", "134", "~8 h"];
+const STATS = ["90 000", "142", "88%", "768", "134", "0,62"];
 
 // Proof metrics, aligned one-to-one with LANDING_COPY.<lang>.proof.desc.
-const PROOF = ["203 456", "~10x", "18 000+", "885/990", "3", "2"];
+const PROOF = ["203 456", "7,5%", "18 000+", "885/990", "3", "2"];
 
 const HERO_EXAMPLES: Record<string, string[]> = {
   fr: ["Présente-toi en 30 secondes", "Parle-moi de ton pipeline chez Opinion Science", "Quel impact concret as-tu livré ?", "Pourquoi devrait-on te recruter ?"],

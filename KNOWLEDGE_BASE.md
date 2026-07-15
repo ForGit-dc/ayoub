@@ -62,7 +62,7 @@ Case study of the Opinion Science flagship (Twitter corpus on cloud technologies
 - UMAP (n_neighbors=30, min_dist=0.05, cosine) then HDBSCAN (min_cluster_size=100, min_samples=8). [v]
 - 142 thematic clusters covering 88% of the corpus (79,200 segments assigned; 12% noise = 10,800 segments), mean persistence 0.62. [v]
 - GPT-4o annotation of 5 representatives per cluster; 134 clusters validated (94%). [v]
-- Estimated LLM annotation cut from about 83 hours (direct approach, 100,000 segments) to about 8 hours via clustering. [v]
+- Clustering annotates only 5 representatives per cluster (about 710 across 142 clusters) instead of every segment, drastically reducing the number of LLM calls (cost and latency). [v] NOTE: the report's about 83 hours (sequential) / about 8 hours (10 workers) figures are the DIRECT approach's own limits on 100,000 segments, NOT a clustering speedup; never attribute them to clustering. [cv]
 Other headline numbers:
 - ELFE cohort at INED: 18,000+ children followed over 10 years. [v]
 - English: TOEIC 885/990. [v]
@@ -85,7 +85,12 @@ up a hybrid storage architecture coupling PostgreSQL (transactional integrity) a
 with Alembic. For LLM Ops I industrialized a semantic clustering pipeline (UMAP + HDBSCAN)
 to cut OpenAI API costs through grouped annotation, and I wrote standardized JSON parsers
 and deduplication mechanisms for corpus robustness. The case-study numbers above quantify
-the clustering approach. My cluster labels are unsupervised (UMAP + HDBSCAN) plus LLM
+the clustering approach: annotating only 5 representatives per cluster (about 710 across
+142 clusters) instead of every one of the 90,000 segments, which drastically cuts the number
+of LLM calls (cost and latency). The report only quantifies the DIRECT approach's own limits
+(annotating 100,000 segments would take about 83 hours sequentially, about 8 hours across 10
+workers); those hours are NOT a clustering gain and must not be attributed to clustering.
+My cluster labels are unsupervised (UMAP + HDBSCAN) plus LLM
 annotation, so I validate them with cluster persistence and manual review of representatives,
 not with precision/recall (which need ground-truth labels).
 
@@ -150,7 +155,8 @@ and R role (R, R Markdown), NOT a cloud role: it does not carry the GCP / Kafka 
 | Embeddings | dimension 768, all-mpnet-base-v2 | Sec 9 case study #3 |
 | UMAP / HDBSCAN params | n_neighbors=30, min_dist=0.05, cosine; min_cluster_size=100, min_samples=8 | Sec 9 case study #4 |
 | Clusters | 142 clusters, 88% coverage, 79,200 assigned, 12% noise (10,800), persistence 0.62 | Sec 9 case study #5 |
-| Annotation | GPT-4o, 5 reps/cluster, 134 validated (94%), ~83h to ~8h | Sec 9 case study #6 |
+| Annotation | GPT-4o, 5 reps/cluster (~710 across 142), 134 validated (94%); clustering cuts LLM calls drastically | Sec 9 case study #6 |
+| Direct-approach limit (NOT a clustering gain) | ~83h sequential / ~8h on 10 workers to annotate 100,000 segments | Sec 9; report 4.1.4 |
 | INED role | Data Scientist intern, Jun to Aug 2024, Paris | Sec 5, role 2 |
 | ELFE cohort | 18,000+ children over 10 years | Sec 5, role 2 |
 | INED modeling | logistic regression, SDQ scores, AIC, R / R Markdown | Sec 5, role 2 |
