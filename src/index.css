@@ -10,7 +10,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Encre & Ambre: amber gold on deep ink navy, matching the landing identity (.lp). */
+    /* Encre & Emeraude: emerald on deep ink navy, matching the landing identity (.lp). */
     --background: 220 49% 8%;
     --foreground: 219 44% 94%;
 
@@ -20,7 +20,7 @@ All colors MUST be HSL.
     --popover: 219 47% 11%;
     --popover-foreground: 219 44% 94%;
 
-    --primary: 36 79% 57%;
+    --primary: 160 61% 47%;
     --primary-foreground: 220 49% 8%;
 
     --secondary: 218 40% 16%;
@@ -29,10 +29,10 @@ All colors MUST be HSL.
     --muted: 218 42% 13%;
     --muted-foreground: 214 25% 68%;
 
-    --accent: 36 79% 57%;
+    --accent: 160 61% 47%;
     --accent-foreground: 220 49% 8%;
-    /* Light-gold highlight (--lp-accent-2 #F2C77C from the landing identity) */
-    --accent-2: 38 82% 72%;
+    /* Mint highlight (--lp-accent-2 #7FE0BC from the landing identity) */
+    --accent-2: 158 61% 69%;
 
     /* Chat / hero background + bubble tokens */
     --bg-slate-start: 220 49% 8%;   /* #0B1220 ink */
@@ -46,18 +46,18 @@ All colors MUST be HSL.
 
     --border: 217 33% 21%;
     --input: 217 33% 21%;
-    --ring: 36 79% 57%;
+    --ring: 160 61% 47%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 219 47% 11%;
     --sidebar-foreground: 219 44% 94%;
-    --sidebar-primary: 36 79% 57%;
+    --sidebar-primary: 160 61% 47%;
     --sidebar-primary-foreground: 220 49% 8%;
     --sidebar-accent: 218 42% 13%;
     --sidebar-accent-foreground: 219 44% 94%;
     --sidebar-border: 217 33% 21%;
-    --sidebar-ring: 36 79% 57%;
+    --sidebar-ring: 160 61% 47%;
   }
 
   .dark {
@@ -70,7 +70,7 @@ All colors MUST be HSL.
     --popover: 219 47% 11%;
     --popover-foreground: 219 44% 94%;
 
-    --primary: 36 79% 57%;
+    --primary: 160 61% 47%;
     --primary-foreground: 220 49% 8%;
 
     --secondary: 218 40% 16%;
@@ -79,16 +79,16 @@ All colors MUST be HSL.
     --muted: 218 42% 13%;
     --muted-foreground: 214 25% 68%;
 
-    --accent: 36 79% 57%;
+    --accent: 160 61% 47%;
     --accent-foreground: 220 49% 8%;
-    --accent-2: 38 82% 72%;
+    --accent-2: 158 61% 69%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 219 44% 96%;
 
     --border: 217 33% 21%;
     --input: 217 33% 21%;
-    --ring: 36 79% 57%;
+    --ring: 160 61% 47%;
     --bg-slate-start: 220 49% 8%;
     --bg-slate-end: 220 52% 6%;
     --chat-user: 217 35% 19%;
@@ -96,12 +96,12 @@ All colors MUST be HSL.
     --chat-border: 217 32% 25%;
     --sidebar-background: 219 47% 11%;
     --sidebar-foreground: 219 44% 94%;
-    --sidebar-primary: 36 79% 57%;
+    --sidebar-primary: 160 61% 47%;
     --sidebar-primary-foreground: 220 49% 8%;
     --sidebar-accent: 218 42% 13%;
     --sidebar-accent-foreground: 219 44% 94%;
     --sidebar-border: 217 33% 21%;
-    --sidebar-ring: 36 79% 57%;
+    --sidebar-ring: 160 61% 47%;
   }
 }
 
@@ -200,21 +200,22 @@ All colors MUST be HSL.
   .scrollbar-chat:hover::-webkit-scrollbar { 
     width: 14px; 
   }
+  /* Token-driven so a palette change never has to touch this block. */
   .scrollbar-chat::-webkit-scrollbar-track {
-    background: #0B1220;
+    background: hsl(var(--background));
     border-radius: 10px;
   }
   .scrollbar-chat::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #E8A33D 0%, #A9752B 100%);
+    background: linear-gradient(180deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.65) 100%);
     border-radius: 10px;
-    border: 3px solid #0B1220;
+    border: 3px solid hsl(var(--background));
   }
   .scrollbar-chat::-webkit-scrollbar-thumb:hover {
-    background: #E8A33D;
+    background: hsl(var(--primary));
   }
   /* Firefox */
   .scrollbar-chat {
     scrollbar-width: thin;
-    scrollbar-color: #E8A33D #0B1220;
+    scrollbar-color: hsl(var(--primary)) hsl(var(--background));
   }
 }

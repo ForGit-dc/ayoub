@@ -3,17 +3,18 @@
    chat and admin pages. */
 
 .lp {
-  /* Encre & Ambre: deep ink-navy ground with warm amber-gold accents and a
-     high-contrast serif display (Fraunces), magazine feel. Cool ground + warm
-     metal keeps the editorial identity while reading crisp and technical. */
+  /* Encre & Emeraude: deep ink-navy ground with emerald accents and a
+     high-contrast serif display (Fraunces), magazine feel. Cool ground + green
+     signal color reads editorial and technical, and clears the registry's
+     reserved warm band (reference gold, boukrani orange). */
   --lp-ground: #0B1220;
   --lp-ground-2: #101A2C;
   --lp-surface: #152238;
   --lp-line: #253750;
   --lp-text: #E8EDF6;
   --lp-muted: #8CA0BC;
-  --lp-accent: #E8A33D;
-  --lp-accent-2: #F2C77C;
+  --lp-accent: #2FBF8F;
+  --lp-accent-2: #7FE0BC;
   --lp-display: "Fraunces", Georgia, "Times New Roman", serif;
   --lp-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
   --lp-sans: "Inter", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;

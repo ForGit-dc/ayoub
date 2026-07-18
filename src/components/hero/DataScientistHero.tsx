@@ -74,13 +74,13 @@ export default function DataScientistHero() {
     return () => { window.removeEventListener("scroll", onScroll); io?.disconnect(); };
   }, []);
 
-  // Hero canvas: NETWORK FLOW motif (particles along data pipes), Encre & Ambre palette.
+  // Hero canvas: NETWORK FLOW motif (particles along data pipes), Encre & Emeraude palette.
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     return startMotif(canvas, {
-      accent: "#E8A33D",                       // --lp-accent (amber gold)
-      accent2: "#F2C77C",                      // --lp-accent-2 (light gold)
+      accent: "#2FBF8F",                       // --lp-accent (emerald)
+      accent2: "#7FE0BC",                      // --lp-accent-2 (mint)
       dim: "rgba(140, 160, 188, 0.62)",        // --lp-muted, readable over ink
     });
   }, []);

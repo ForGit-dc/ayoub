@@ -80,7 +80,7 @@ export function ChatInput({ onSend, input, setInput, placeholder }: Props) {
       <div className="flex gap-2 items-end rounded-md border border-[hsl(var(--chat-border))] bg-[hsl(var(--chat-user))]/80 backdrop-blur-sm p-1.5 ps-3.5 shadow-[0_12px_44px_-26px_#000] transition-colors focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/25">
         <Textarea
           aria-label="Type your question"
-          placeholder={placeholder || "Ask anything — language auto-detected"}
+          placeholder={placeholder || "Ask anything - language auto-detected"}
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {

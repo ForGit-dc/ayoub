@@ -48,7 +48,7 @@ This only changes tone/length; facts still follow the knowledge base and guardra
     
     // Chat surface
     expandWithAi: "Expand with AI",
-    inputPlaceholder: "Ask anything — language auto-detected",
+    inputPlaceholder: "Ask anything - language auto-detected",
     inputHint: "Enter = Send · Shift+Enter = New line",
     usageLabel: "Questions",
     newMessages: (n: number) => `New messages (${n})`,
@@ -106,7 +106,7 @@ Cela ne change pas les faits : le bot reste fidèle à la base de connaissances 
     
     // Chat surface
     expandWithAi: "Développer avec l'IA",
-    inputPlaceholder: "Pose ta question — langue détectée automatiquement",
+    inputPlaceholder: "Pose ta question - langue détectée automatiquement",
     inputHint: "Entrée = Envoyer · Maj+Entrée = Nouvelle ligne",
     usageLabel: "Questions",
     newMessages: (n: number) => `Nouveaux messages (${n})`,
@@ -164,7 +164,7 @@ Cela ne change pas les faits : le bot reste fidèle à la base de connaissances 
     
     // Chat surface
     expandWithAi: "توسيع بالذكاء الاصطناعي",
-    inputPlaceholder: "اسأل ما تشاء — تُكتشف اللغة تلقائياً",
+    inputPlaceholder: "اسأل ما تشاء - تُكتشف اللغة تلقائياً",
     inputHint: "Enter = إرسال · Shift+Enter = سطر جديد",
     usageLabel: "الأسئلة",
     newMessages: (n: number) => `رسائل جديدة (${n})`,
